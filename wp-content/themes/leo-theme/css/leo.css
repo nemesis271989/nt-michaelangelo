@@ -1,0 +1,33 @@
+body  {
+    margin-bottom: 0px;
+    background-image: url('../img/skyline-bkg.jpg');
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+img.navlogo {
+    width: 35%;
+    height: auto;
+    margin-top: -13px;
+}
+img.nicklogo {
+    width: 35%;
+    height: auto;
+    margin-top: 10px;
+    display: inline-block;
+}
+.jumbotron  {
+    margin-bottom: 0px;
+    background-image: url('../img/hero.jpg');
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.episode-box {
+    width: 35%;
+    height: auto;
+    float: left;
+    padding: 0px 15px 3px 0px;
+    margin-top: 25px;
+}

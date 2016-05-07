@@ -1,0 +1,16 @@
+/*
+Theme Name: Leonardo Theme
+Author: Jay Johnson
+Author URI: http://jayevanjohnson.com/
+Description: A simple TMNT theme based on Bootstrap
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Code and take over the world line-by-line
+*/
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
