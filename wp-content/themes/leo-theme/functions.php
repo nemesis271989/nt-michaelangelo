@@ -20,4 +20,43 @@ function theme_js() {
     wp_enqueue_script( 'ie10_js', get_template_directory_uri() . '/js/ie10-viewport-bug-workaround.js', array('jquery'), '', true );
 }
 add_action( 'wp_enqueue_scripts', 'theme_js' );
+
+add_theme_support( 'menus' );
+
+/*============================
+=            Menu            =
+============================*/
+
+function register_theme_menus() {
+    register_nav_menus(
+      array(
+        'header-menu' => __( 'Header Menu' )
+      )
+    );
+}
+add_action( 'init', 'register_theme_menus' );
+
+/*===============================
+=            Widgets            =
+===============================*/
+
+function create_widget($name, $id, $description) {
+    register_sidebar(array(
+      'name' => __( $name ),
+      'id'   => $id,
+      'description' => __( $description ),
+      'before_widget' => '<div class="widget">',
+      'after_widget' => '</div>',
+      'before_title' => '<h3>',
+      'after_title' => '</h3>'
+    ));
+}
+
+create_widget( 'Front Page Left', 'front-left', 'Displays on the left of the hompage');
+create_widget( 'Front Page Center', 'front-center', 'Displays on the center of the hompage');
+create_widget( 'Front Page Right', 'front-right', 'Displays on the right of the hompage');
+
+/* SIDEBAR WIDGET */
+create_widget( 'Page Sidebar', 'page', 'Displays on side of pages with sidebar');
+
 ?>

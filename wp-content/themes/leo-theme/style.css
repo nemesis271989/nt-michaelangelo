@@ -14,3 +14,39 @@ body {
   padding-top: 50px;
   padding-bottom: 20px;
 }
+
+.admin-bar .navbar-fixed-top {
+    margin-top: 30px;
+}
+.current-menu-item > a {
+    background: #F00;
+}
+@media (min-width: 768px) {
+    .sub-menu {
+        display: none;
+        position: absolute;
+        background: #222;
+        padding: 10px 15px;
+        width: 200px;
+    }
+
+    li:hover .sub-menu {
+        display: block
+    }
+}
+
+.sub-menu li {
+    margin-bottom: 10px;
+    list-style: none;
+}
+.sidebar {
+  margin-top: 40px;
+  color: #444;
+}
+.sidebar h3 {
+  color: #888;
+}
+
+.widget {
+  margin: 10px 0 30px;
+}
