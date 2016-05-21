@@ -1,5 +1,7 @@
 # WordPress Ninja Turtles Practice
 
+![link to screenshot](https://i.imgur.com/VIKNWyp.png)
+
 ## Before you begin, make sure all your tools are installed and set up. 
 
 [Here is a helpful step-by-step](https://github.com/kingluddite/web-dev-notes/blob/master/workflow/classroom-setup-instructions.md) in case you forgot.

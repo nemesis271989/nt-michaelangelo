@@ -22,6 +22,8 @@ function theme_js() {
 add_action( 'wp_enqueue_scripts', 'theme_js' );
 
 add_theme_support( 'menus' );
+/* add featured images */
+add_theme_support( 'post-thumbnails' );
 
 /*============================
 =            Menu            =
@@ -35,6 +37,19 @@ function register_theme_menus() {
     );
 }
 add_action( 'init', 'register_theme_menus' );
+
+/*====================================
+=            Post Excerpt            =
+====================================*/
+
+// Replaces the excerpt "more" text by a link
+function new_excerpt_more($more) {
+       global $post;
+
+       return '<a class="moretag" href="'. get_permalink($post->ID) . '"> MORE</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
 
 /*===============================
 =            Widgets            =
@@ -58,5 +73,7 @@ create_widget( 'Front Page Right', 'front-right', 'Displays on the right of the 
 
 /* SIDEBAR WIDGET */
 create_widget( 'Page Sidebar', 'page', 'Displays on side of pages with sidebar');
+
+create_widget( 'Blog Sidebar', 'blog', 'Displays on side of pages in blog section');
 
 ?>

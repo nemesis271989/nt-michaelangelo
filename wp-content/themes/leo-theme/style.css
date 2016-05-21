@@ -50,3 +50,19 @@ body {
 .widget {
   margin: 10px 0 30px;
 }
+
+article.post {
+    margin: 20px 0 40px;
+}
+
+/* make images reponsive */
+.portfolio-piece img,
+.portfolio-image img {
+    max-width: 100%;
+}
+
+@media (min-width:540px) {
+    .portfolio-piece h4 {
+        font-size: .8em;
+    }
+}
